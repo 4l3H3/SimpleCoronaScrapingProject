@@ -21,8 +21,8 @@ wb = Workbook()
 ws = wb.active
 ws.title = "Corona cases"
 
-for x_index in range(1, len(continents)):
-    ws['A' + str(x_index)] = continents[x_index]
-    ws['B' + str(x_index)] = total_numbers[x_index]
+for x_index in range(0, len(continents)):
+    ws['A' + str(x_index + 1)] = continents[x_index]
+    ws['B' + str(x_index + 1)] = total_numbers[x_index]
 
 wb.save('cases.xlsx')
